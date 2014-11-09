@@ -1,0 +1,14 @@
+* sporj
+Serializable functions with explicit, checked closures.
+** Motivation
+TODO
+** Usage
+TODO
+** Inspiration
+Inspired by Scala's [[https://github.com/heathermiller/spores][spores]].
+
+The record structure is somewhat based on the structure of datomic's [[http://docs.datomic.com/clojure/index.html#datomic.api/function][function]] which is also serializable.
+** TODOs
+- midje tests
+- figure out how to easily serialize/deserialize (transit?)
+- better name (?)
