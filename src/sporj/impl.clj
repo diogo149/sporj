@@ -3,8 +3,7 @@
 (declare gen-cached-fn!)
 
 ;; TODO loop + eval for all the versions
-(eval `(defrecord ~'Sporj [~'params
-                           ~'locals
+(eval `(defrecord ~'Sporj [~'locals
                            ~'code
                            ~'cached-fn]
          clojure.lang.IFn
@@ -19,7 +18,7 @@
 
 (defn gen-cached-fn
   "Generate the fn for a sporj record"
-  [{:keys [params locals code]}]
+  [{:keys [locals code]}]
   ;; TODO
   )
 
@@ -32,5 +31,5 @@
 
 (defn new-sporj
   "Generate a new sporj record"
-  [params locals code]
-  (Sporj. params locals code (volatile! nil)))
+  [locals code]
+  (Sporj. locals code (volatile! nil)))
