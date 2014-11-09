@@ -1,5 +1,5 @@
 * sporj
-Serializable functions with explicit, checked closures.
+Serializable functions with explicit, checked closures for Clojure.
 ** Motivation
 TODO
 ** Usage
