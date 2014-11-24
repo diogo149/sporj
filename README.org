@@ -1,5 +1,7 @@
 * sporj
 Serializable functions with explicit, checked closures for Clojure.
+** Status
+Not being worked on right now
 ** Motivation
 TODO
 ** Usage
@@ -9,6 +11,14 @@ Inspired by Scala's [[https://github.com/heathermiller/spores][spores]].
 
 The record structure is somewhat based on the structure of datomic's [[http://docs.datomic.com/clojure/index.html#datomic.api/function][function]] which is also serializable.
 ** TODOs
+- namespace qualify symbols
+  - NOTE: this seemed trickier than I initially thought... might have to skip this and run the risk of capturing the wrong function when eval-ing (eg. if ~get~ is defined in the eval-ing namespace) or eval the function in a different namespace
 - midje tests
+- make a data? function which checks deep ability to be converted to data
 - figure out how to easily serialize/deserialize (transit?)
+  - https://github.com/cognitect/transit-clj/blob/master/src/cognitect/transit.clj
+  - http://cognitect.github.io/transit-tour/
+  - http://cognitect.github.io/transit-clj/
+- generate all versions of invoke for function records w/ loop + eval
+  - https://github.com/clojure/clojure/blob/master/src/jvm/clojure/lang/IFn.java
 - better name (?)
